@@ -11,7 +11,7 @@ const DataModel = sequelize.define('DataModel', {
   task5: { type: DataTypes.FLOAT },
 });
 
-// 태스크별 통계 저장 모델 (어느 코어의 어느 태스크에 대한 통계인지 지정하기 위해 task 필드 추가)
+// 태스크별 통계 저장 모델 
 const StatsModel = sequelize.define('StatsModel', {
   core: { type: DataTypes.STRING, allowNull: false },
   task: { type: DataTypes.STRING, allowNull: false }, // 예: 'task1'
