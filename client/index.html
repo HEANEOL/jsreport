@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>코어별 / 태스크별 분석 & 차트 타입 토글</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts"></script>
+  <script src="app.js" defer></script>
+  <style>
+    #controlContainer {
+      margin-top: 20px;
+    }
+    #controlContainer button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #optionContainer {
+      margin-top: 10px;
+    }
+    #optionContainer button {
+      margin: 4px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>코어별 / 태스크별 데이터 분석</h1>
+
+  <!-- 파일 업로드 -->
+  <div>
+    <input type="file" id="fileInput" />
+    <button type="button" onclick="uploadFile()">파일 업로드</button>
+    <button type="button" onclick="loadChartData()">데이터 갱신</button>
+   
+  </div>
+
+  <!-- 차트 -->
+  <div id="chart" style="width: 600px; height: 400px; margin-top: 20px;">
+    <p>데이터가 없습니다. 파일을 업로드해주세요.</p>
+  </div>
+
+  <!-- 메인 컨트롤 버튼 -->
+  <div id="controlContainer">
+    <button id="toggleDimensionButton" type="button">현재: 태스크 보기</button>
+    <button id="toggleChartTypeButton" type="button">현재: 막대 차트 보기</button>
+  </div>
+
+  <!-- 선택 버튼 (코어 또는 태스크) -->
+  <div id="optionContainer"></div>
+</body>
+</html>
