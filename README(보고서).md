@@ -10,9 +10,7 @@
 
 
 
-프로그렘 사용을 위한 수행절차
-
-
+**프로그렘 사용을 위한 수행절차**
 npm install express express-fileupload sequelize mysql2 echarts
 이를 통해 웹서버, 파일조작,데이터베이스, 데이터 시각화를 위한 그래프를 추가함.
 npm install << 이걸론 위에게 다운안되니 꼭 하고 실행해야함.
